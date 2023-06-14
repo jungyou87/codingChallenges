@@ -20,3 +20,16 @@ def numCheck (k, givenList):
       return True
     else:
       return False
+
+# Cleaner code from CHATGPT
+
+def has_pair_sum(numbers, k):
+    encountered_numbers = set()
+
+    for number in numbers:
+        complement = k - number
+        if complement in encountered_numbers:
+            return True
+        encountered_numbers.add(number)
+
+    return False
